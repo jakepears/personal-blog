@@ -143,12 +143,16 @@ export default function NavbarAlt(props) {
                           <Link
                             href={item.href}
                             key={index + item.label}
-                            className="rounded-full px-5 py-2 font-medium text-gray-600 outline-none ring-blue-100 hover:text-blue-500 focus-visible:text-blue-500 focus-visible:ring-2 dark:text-gray-400"
+                            className="rounded-full px-5 py-0 font-medium text-gray-600 outline-none ring-blue-100 hover:text-blue-500 focus-visible:text-blue-500 focus-visible:ring-2 dark:text-gray-400"
                             target={item.external ? "_blank" : ""}
                             rel={
-                              item.external ? "noopener noreffer" : ""
+                              item.external
+                                ? "noopener noreferrer"
+                                : ""
                             }>
-                            {item.label}
+                            <span className="hoverUnderline">
+                              {item.label}
+                            </span>
                           </Link>
                         )}
                       </>
@@ -178,7 +182,9 @@ export default function NavbarAlt(props) {
                           key={index + item.label}
                           className="rounded-full px-5 py-2 text-sm font-medium text-gray-600 outline-none ring-blue-100 hover:text-blue-500 focus-visible:text-blue-500 focus-visible:ring-2 dark:text-gray-400"
                           target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
+                          rel={
+                            item.external ? "noopener noreferrer" : ""
+                          }>
                           {item.label}
                         </Link>
                       )}
@@ -205,10 +211,13 @@ const DropdownMenu = ({ menu, items, mobile }) => {
       {({ open }) => (
         <>
           <Menu.Button
+            onMouseEnter={({ target }) =>
+              open ? "" : target.click()
+            }
             className={cx(
-              "flex items-center gap-x-1 rounded-full px-5 py-2  font-medium outline-none ring-blue-100 transition-all focus-visible:text-blue-500 focus-visible:ring-2",
+              "flex items-center gap-x-1 rounded-full px-5 py-2 font-medium text-gray-500 outline-none ring-blue-100 transition-all focus-visible:ring-2 dark:focus-visible:text-[#f7f7f7]",
               open
-                ? "text-blue-500 hover:text-blue-500"
+                ? "text-gray-600 dark:text-[#f7f7f7]"
                 : " text-gray-600 dark:text-gray-400 ",
               mobile
                 ? "w-full px-4 py-2 text-sm"
@@ -219,12 +228,12 @@ const DropdownMenu = ({ menu, items, mobile }) => {
           </Menu.Button>
           <Transition
             as={Fragment}
-            enter="lg:transition lg:ease-out lg:duration-100"
-            enterFrom="lg:transform lg:opacity-0 lg:scale-95"
+            enter="lg:transition lg:ease-in-out lg:duration-300"
+            enterFrom="lg:transform lg:opacity-0 lg:scale-90"
             enterTo="lg:transform lg:opacity-100 lg:scale-100"
-            leave="lg:transition lg:ease-in lg:duration-75"
+            leave="lg:transition lg:ease-in-out lg:duration-200"
             leaveFrom="lg:transform lg:opacity-100 lg:scale-100"
-            leaveTo="lg:transform lg:opacity-0 lg:scale-95">
+            leaveTo="lg:transform lg:opacity-0 lg:scale-90">
             <Menu.Items
               className={cx(
                 "z-20 origin-top-left rounded-md  focus:outline-none  lg:absolute lg:left-0  lg:w-56",
@@ -239,10 +248,13 @@ const DropdownMenu = ({ menu, items, mobile }) => {
                         className={cx(
                           "flex items-center space-x-2 px-5 py-2 text-sm lg:space-x-4",
                           active
-                            ? "text-blue-500"
-                            : "text-gray-700 hover:text-blue-500 focus:text-blue-500 dark:text-gray-300"
+                            ? "text-gray-800 dark:text-[#f7f7f7]"
+                            : "text-gray-600 dark:text-[#f7f7f7]"
                         )}>
-                        <span> {item.title}</span>
+                        <span className="hoverUnderline">
+                          {" "}
+                          {item.title}
+                        </span>
                       </Link>
                     )}
                   </Menu.Item>

@@ -57,7 +57,9 @@ export default function Navbar(props) {
                           key={`${item.label}${index}`}
                           className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
                           target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
+                          rel={
+                            item.external ? "noopener noreferrer" : ""
+                          }>
                           {item.label}
                         </Link>
                       )}
@@ -128,7 +130,9 @@ export default function Navbar(props) {
                           key={`${item.label}${index}`}
                           className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
                           target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
+                          rel={
+                            item.external ? "noopener noreferrer" : ""
+                          }>
                           <span> {item.label}</span>
                           {item.badge && (
                             <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
@@ -158,7 +162,9 @@ export default function Navbar(props) {
                           key={`${item.label}${index}`}
                           className="w-full px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
                           target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}>
+                          rel={
+                            item.external ? "noopener noreferrer" : ""
+                          }>
                           {item.label}
                         </Link>
                       )}
