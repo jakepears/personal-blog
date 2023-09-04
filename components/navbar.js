@@ -74,9 +74,7 @@ export default function Navbar(props) {
                         sizes="(max-width: 640px) 100vw, 200px"
                       />
                     ) : (
-                      <span className="block text-center">
-                        Stablo
-                      </span>
+                      <span className="block text-center">Jake</span>
                     )}
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
@@ -205,7 +203,7 @@ const DropdownMenu = ({ menu, items, mobile }) => {
             <Menu.Items
               className={cx(
                 "z-20 origin-top-left rounded-md  focus:outline-none  lg:absolute lg:left-0  lg:w-56",
-                !mobile && "bg-white shadow-lg  dark:bg-gray-800"
+                !mobile && "bg-[#f7f7f7] shadow-lg  dark:bg-gray-800"
               )}>
               <div className={cx(!mobile && "py-3")}>
                 {items.map((item, index) => (

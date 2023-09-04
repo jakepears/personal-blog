@@ -66,11 +66,6 @@ export default function NavbarAlt(props) {
           path: "/post/sidebar/lessons-of-happiness-i-learned-from-a-mountain-village"
         }
       ]
-    },
-    {
-      label: "Purchase",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
     }
   ];
 
@@ -80,7 +75,7 @@ export default function NavbarAlt(props) {
         <Disclosure>
           {({ open }) => (
             <>
-              <div className="flex flex-wrap justify-between md:gap-10 lg:flex-nowrap">
+              <div className="flex flex-wrap justify-between md:gap-12 lg:flex-nowrap">
                 <div className="flex w-full items-center justify-between lg:w-auto">
                   <Link href="/" className="w-28 dark:hidden">
                     {props.logo ? (
@@ -92,7 +87,7 @@ export default function NavbarAlt(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Pearson
                       </span>
                     )}
                   </Link>
@@ -106,7 +101,7 @@ export default function NavbarAlt(props) {
                       />
                     ) : (
                       <span className="block text-center">
-                        Stablo
+                        Pearson
                       </span>
                     )}
                   </Link>
@@ -133,7 +128,7 @@ export default function NavbarAlt(props) {
                     </svg>
                   </Disclosure.Button>
                 </div>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-10">
                   <div className="hidden w-full flex-col items-center lg:flex lg:w-auto lg:flex-row ">
                     {menu.map((item, index) => (
                       <>
@@ -150,7 +145,9 @@ export default function NavbarAlt(props) {
                             key={index + item.label}
                             className="rounded-full px-5 py-2 font-medium text-gray-600 outline-none ring-blue-100 hover:text-blue-500 focus-visible:text-blue-500 focus-visible:ring-2 dark:text-gray-400"
                             target={item.external ? "_blank" : ""}
-                            rel={item.external ? "noopener" : ""}>
+                            rel={
+                              item.external ? "noopener noreffer" : ""
+                            }>
                             {item.label}
                           </Link>
                         )}
@@ -231,7 +228,7 @@ const DropdownMenu = ({ menu, items, mobile }) => {
             <Menu.Items
               className={cx(
                 "z-20 origin-top-left rounded-md  focus:outline-none  lg:absolute lg:left-0  lg:w-56",
-                !mobile && "bg-white shadow-lg  dark:bg-gray-800"
+                !mobile && "bg-[#f7f7f7] shadow-lg  dark:bg-gray-800"
               )}>
               <div className={cx(!mobile && "py-3")}>
                 {items.map((item, index) => (

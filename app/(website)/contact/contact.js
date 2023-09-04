@@ -45,16 +45,16 @@ export default function Contact({ settings }) {
 
   return (
     <Container>
-      <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
+      <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-[#f7f7f7] lg:text-4xl lg:leading-snug">
         Contact
       </h1>
       <div className="text-center">
         <p className="text-lg">Please reach out.</p>
-      </div> 
+      </div>
 
       <div className="my-10 grid md:grid-cols-2">
         <div className="my-10">
-          <h2 className="text-2xl font-semibold dark:text-white">
+          <h2 className="text-2xl font-semibold dark:text-[#f7f7f7]">
             Contact Jake
           </h2>
           <p className="mt-5 max-w-sm">
@@ -97,10 +97,10 @@ export default function Contact({ settings }) {
                 type="text"
                 placeholder="Full Name"
                 autoComplete="false"
-                className={`w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-gray-900 dark:text-white   dark:placeholder:text-gray-200  ${
+                className={`w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-gray-900 dark:text-[#f7f7f7]   dark:placeholder:text-gray-200  ${
                   errors.name
                     ? "border-red-600 ring-red-100 focus:border-red-600 dark:ring-0"
-                    : "border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white"
+                    : "border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-[#f7f7f7]"
                 }`}
                 {...register("name", {
                   required: "Please use your full name",
@@ -124,10 +124,10 @@ export default function Contact({ settings }) {
                 placeholder="Email Address"
                 name="email"
                 autoComplete="false"
-                className={`w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-gray-900 dark:text-white   dark:placeholder:text-gray-200  ${
+                className={`w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800 focus:ring-4 dark:bg-gray-900 dark:text-[#f7f7f7]   dark:placeholder:text-gray-200  ${
                   errors.email
                     ? "border-red-600 ring-red-100 focus:border-red-600 dark:ring-0"
-                    : "border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white"
+                    : "border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-[#f7f7f7]"
                 }`}
                 {...register("email", {
                   required: "Enter your email",
@@ -148,10 +148,10 @@ export default function Contact({ settings }) {
               <textarea
                 name="message"
                 placeholder="Your Message"
-                className={`h-36 w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800   focus:ring-4 dark:bg-gray-900  dark:text-white dark:placeholder:text-gray-200  ${
+                className={`h-36 w-full rounded-md border-2 px-4 py-3 outline-none placeholder:text-gray-800   focus:ring-4 dark:bg-gray-900  dark:text-[#f7f7f7] dark:placeholder:text-gray-200  ${
                   errors.message
                     ? "border-red-600 ring-red-100 focus:border-red-600 dark:ring-0"
-                    : "border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-white"
+                    : "border-gray-300 ring-gray-100 focus:border-gray-600 dark:border-gray-600 dark:ring-0 dark:focus:border-[#f7f7f7]"
                 }`}
                 {...register("message", {
                   required: "Enter your Message"
@@ -167,10 +167,10 @@ export default function Contact({ settings }) {
 
             <button
               type="submit"
-              className="w-full rounded-md bg-gray-900 px-7 py-4 font-semibold text-white transition-colors hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-200 focus:ring-offset-2 dark:bg-white dark:text-black ">
+              className="w-full rounded-md bg-gray-900 px-7 py-4 font-semibold text-[#f7f7f7] transition-colors hover:bg-gray-800 focus:outline-none focus:ring focus:ring-gray-200 focus:ring-offset-2 dark:bg-[#f7f7f7] dark:text-[#1c1c1c] ">
               {isSubmitting ? (
                 <svg
-                  className="mx-auto h-5 w-5 animate-spin text-white dark:text-black"
+                  className="mx-auto h-5 w-5 animate-spin text-[#f7f7f7] dark:text-[#1c1c1c]"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24">

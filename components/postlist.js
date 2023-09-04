@@ -79,22 +79,25 @@ export default function PostList({
                   ? "text-3xl"
                   : "text-lg",
                 fontWeight === "normal"
-                  ? "line-clamp-2 font-medium  tracking-normal text-black"
+                  ? "line-clamp-2 font-medium  tracking-normal text-[#1c1c1c]"
                   : "font-semibold leading-snug tracking-tight",
-                "mt-2    dark:text-white"
+                "mt-2    dark:text-[#f7f7f7]"
               )}>
               <Link
                 href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
                   post.slug.current
                 }`}>
                 <span
-                  className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom
-      bg-no-repeat
-      transition-[background-size]
-      duration-500
-      hover:bg-[length:100%_3px]
-      group-hover:bg-[length:100%_10px]
-      dark:from-purple-800 dark:to-purple-900">
+                  className="
+                  bottom-[-8x] rounded-sm bg-gradient-to-r
+                  from-slate-800
+                  to-slate-900
+                  bg-[length:0px_2px]
+                  bg-left-bottom bg-no-repeat duration-500
+                  ease-[cubic-bezier(0.465,0.183,0.153,0.946)]
+                  after:bg-right-bottom
+                  group-hover:bg-[length:100%_2px]
+                  dark:from-slate-100 dark:to-slate-200">
                   {post.title}
                 </span>
               </Link>

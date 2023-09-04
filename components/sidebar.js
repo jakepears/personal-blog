@@ -26,7 +26,7 @@ export default function Sidebar(props) {
 function Searchbar() {
   return (
     <div>
-      <h3 className="text-2xl font-bold dark:text-white">
+      <h3 className="text-2xl font-bold dark:text-[#f7f7f7]">
         Search Posts
       </h3>
       <form action="/search" method="GET" className="mt-4">
@@ -39,7 +39,9 @@ function Searchbar() {
 function RelatedPosts({ related, pathPrefix }) {
   return (
     <div className="mt-10">
-      <h3 className="text-2xl font-bold dark:text-white">Related</h3>
+      <h3 className="text-2xl font-bold dark:text-[#f7f7f7]">
+        Related
+      </h3>
       <div className="mt-6 grid gap-6">
         {related.slice(0, 3).map((item, index) => {
           const imageProps = item?.image
@@ -62,7 +64,7 @@ function RelatedPosts({ related, pathPrefix }) {
                   />
                 </div>
                 <div>
-                  <h3 className="font-medium dark:text-white">
+                  <h3 className="font-medium dark:text-[#f7f7f7]">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm text-gray-500">
@@ -81,7 +83,7 @@ function RelatedPosts({ related, pathPrefix }) {
 function Categories({ categories }) {
   return (
     <div className="mt-10">
-      <h3 className="text-2xl font-bold dark:text-white">
+      <h3 className="text-2xl font-bold dark:text-[#f7f7f7]">
         Categories
       </h3>
       <ul className="mt-4 grid">
