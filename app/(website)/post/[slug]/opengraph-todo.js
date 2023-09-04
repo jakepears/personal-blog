@@ -14,10 +14,10 @@ export default async function handler({ params }) {
   const post = await getPostBySlug(params.slug);
 
   const fontData = await InterBold;
-  // const [interRegularFont, interBoldFont] = await Promise.all([
-  //   InterRegular,
-  //   InterBold
-  // ]);
+  const [interRegularFont, interBoldFont] = await Promise.all([
+    InterRegular,
+    InterBold
+  ]);
 
   return new ImageResponse(<OgImage post={post} />, {
     width: 1200,
