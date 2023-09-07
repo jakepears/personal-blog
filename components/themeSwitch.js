@@ -1,24 +1,24 @@
+/** @format */
 "use client";
-
 import { useTheme } from "next-themes";
 import { SunIcon } from "@heroicons/react/24/outline";
 
-const ThemeSwitch = () => {
-  const { theme, setTheme } = useTheme();
+export default function ThemeSwitch() {
+  const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <div className="inline-flex items-center">
-      <SunIcon className="mr-3 h-6 w-6" />
-      <select
-        name="themeSwitch"
-        value={theme}
-        onChange={e => setTheme(e.target.value)}>
-        <option value="system">System</option>
-        <option value="dark">Dark</option>
-        <option value="light">Light</option>
-      </select>
+      <SunIcon
+        className={`mr-3 h-6 w-6 cursor-pointer duration-300 ${
+          currentTheme === "dark"
+            ? "text-[#f7f7f7]"
+            : "text-[#1c1c1c]"
+        }`}
+        onClick={() =>
+          theme == "dark" ? setTheme("light") : setTheme("dark")
+        }
+      />
     </div>
   );
-};
-
-export default ThemeSwitch;
+}

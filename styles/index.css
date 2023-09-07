@@ -5,6 +5,11 @@
 /*! purgecss start ignore */
 @import "prism.css";
 /*! purgecss end ignore */
+@layer base {
+  body {
+    @apply duration-300 ease-[cubic-beizer(0.465,0.183,0.153,0.946)] dark:bg-[#1c1c1c] dark:duration-300 dark:ease-[cubic-beizer(0.465,0.183,0.153,0.946)];
+  }
+}
 
 @layer components {
   .hoverUnderline {

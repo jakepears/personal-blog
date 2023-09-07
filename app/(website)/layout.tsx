@@ -9,14 +9,12 @@ export async function sharedMetaData(params) {
   return {
     // metadataBase: new URL(settings.url),
     title: {
-      default:
-        settings?.title ||
-        "Jake - Blog Template for Next.js & Sanity CMS",
+      default: settings?.title || "Jake&apos;s Blog",
       template: "%s | Jake"
     },
     description:
       settings?.description ||
-      "Pearson - popular open-source next.js and sanity blog template",
+      "Pearson",
     keywords: ["Next.js", "Sanity", "Tailwind CSS"],
     authors: [{ name: "Jake Pearson" }],
     canonical: settings?.url,

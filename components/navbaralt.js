@@ -10,6 +10,7 @@ import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
 import SearchInput from "./ui/search";
+import ThemeSwitch from "./themeSwitch";
 
 export default function NavbarAlt(props) {
   const menu = [
@@ -77,27 +78,15 @@ export default function NavbarAlt(props) {
             <>
               <div className="flex flex-wrap justify-between md:gap-12 lg:flex-nowrap">
                 <div className="flex w-full items-center justify-between lg:w-auto">
-                  <Link href="/" className="w-28 dark:hidden">
+                  <Link
+                    href="/"
+                    className="w-32 duration-300 ease-in-out dark:invert">
                     {props.logo ? (
                       <Image
                         src={urlForImage(props.logo)}
                         alt="Logo"
                         priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
-                      />
-                    ) : (
-                      <span className="block text-center">
-                        Pearson
-                      </span>
-                    )}
-                  </Link>
-                  <Link href="/" className="hidden w-28 dark:block">
-                    {props.logoalt ? (
-                      <Image
-                        src={urlForImage(props.logoalt)}
-                        alt="Logo"
-                        priority={true}
-                        sizes="(max-width: 640px) 100vw, 200px"
+                        sizes="(max-width: 640px) 100vw, 250px"
                       />
                     ) : (
                       <span className="block text-center">
@@ -157,6 +146,9 @@ export default function NavbarAlt(props) {
                         )}
                       </>
                     ))}
+                  </div>
+                  <div className="sm:hidden">
+                    <ThemeSwitch />
                   </div>
                   <div className="hidden lg:block">
                     <form action="/search" method="GET">
