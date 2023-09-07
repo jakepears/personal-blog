@@ -13,7 +13,7 @@ export default function ThemeSwitch() {
         className={`mr-3 h-6 w-6 cursor-pointer duration-300 ${
           currentTheme === "dark"
             ? "text-[#f7f7f7]"
-            : "text-[#1c1c1c]"
+            : "text-[#f7f7f7]"
         }`}
         onClick={() =>
           theme == "dark" ? setTheme("light") : setTheme("dark")

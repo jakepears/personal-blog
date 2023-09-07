@@ -72,7 +72,7 @@ export default function NavbarAlt(props) {
 
   return (
     <Container className="!py-0">
-      <nav className="my-4">
+      <nav className="py-6">
         <Disclosure>
           {({ open }) => (
             <>
