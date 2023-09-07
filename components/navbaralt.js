@@ -10,7 +10,6 @@ import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
 import SearchInput from "./ui/search";
-import ThemeSwitch from "./themeSwitch";
 
 export default function NavbarAlt(props) {
   const menu = [
@@ -146,9 +145,6 @@ export default function NavbarAlt(props) {
                         )}
                       </>
                     ))}
-                  </div>
-                  <div className="sm:hidden">
-                    <ThemeSwitch />
                   </div>
                   <div className="hidden lg:block">
                     <form action="/search" method="GET">
